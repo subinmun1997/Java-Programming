@@ -14,24 +14,27 @@ class SnuffleCap{
 	}
 }
 
+class SinusCap{
+	SinivelCap siCap = new SinivelCap();
+	SneezeCap szCap = new SneezeCap();
+	SnuffleCap sfCap = new SnuffleCap();
+	
+	void take() {
+		siCap.take();
+		szCap.take();
+		sfCap.take();
+	}
+}
+
 class ColdPatient{
-	void takeSinivelCap(SinivelCap cap) {
-		cap.take();
-	}
-	void takeSneezeCap(SneezeCap cap) {
-		cap.take();
-	}
-	void takeSnuffleCap(SnuffleCap cap) {
+	void takeSinus(SinusCap cap) {
 		cap.take();
 	}
 }
 
-class BadEncapsulation {
+class CompEncapsulation {
 	public static void main(String[] args) {
 		ColdPatient suf = new ColdPatient();
-		
-		suf.takeSinivelCap(new SinivelCap());
-		suf.takeSneezeCap(new SneezeCap());
-		suf.takeSnuffleCap(new SnuffleCap());
+		suf.takeSinus(new SinusCap());
 	}
 }
