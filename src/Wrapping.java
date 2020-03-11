@@ -29,6 +29,8 @@ class Wrapping {
 		}
 		else if (box instanceof PaperBox) {
 			((PaperBox)box).paperWrap();
+			
+			
 		}
 		else {
 			box.simpleWrap();
